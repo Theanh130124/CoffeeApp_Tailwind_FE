@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto&display=swap'); 
+/* Này là font Karla */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +7,10 @@
 /*Khi 1 class css muốn áp dụng nhiều thì viết vào đây -comment // nó bị bug 
 ct = custom*/
 .ct-top-menu-item{
-    @apply cursor-pointer py-1 hover:text-gray-800 relative after:absolute after:bottom-0 after:left-0 after:bg-light-coffee after:h-0.5 after:w-0  hover:after:w-full after:transition-all after:ease-in-out after:duration-300;
+    @apply cursor-pointer py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:bg-light-coffee after:h-0.5 after:w-0  hover:after:w-full after:transition-all after:ease-in-out after:duration-300;
+}
+.ct-top-menu-item-active{
+    @apply text-gray-500;
 }
 .ct-icon{
     @apply w-5 h-5 inline-block; 
@@ -13,4 +18,8 @@ ct = custom*/
 }
 .ct-badge-circle{
     @apply text-xs text-center rounded-full px-1.5;
+}
+.ct-top-menu-group{
+    @apply absolute top-10 z-50 w-full bg-white text-center animate-slideDown; 
+    /* đi với realtive cha để thành nhóm dọc */
 }

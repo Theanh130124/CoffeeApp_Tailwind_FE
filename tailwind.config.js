@@ -1,14 +1,28 @@
- /** @type {import('tailwindcss').Config} */
- export default {
-       content: ["./src/**/*.{html,js}"],
-        theme: {
-          extend: {
-            colors : {
-              //Các này mình tự định nghĩa chứ tailwind Không có
-              'light-coffee': "#C89F94"
-            }
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {
+      colors: {
+        'light-coffee': "#C89F94", // Màu tự định nghĩa
+      },
 
-          },
+      fontFamily: {
+        Karla: ['Karla', 'sans-serif'], // Font chữ tùy chỉnh
+      },
+
+      keyframes: {
+        slideDown: {
+          '0%, 100%': { transform: 'translateY(-100%)' },
+          '50%': { transform: 'translateY(0%)' },
         },
-        plugins: [],
-      }
+      },
+
+      animation: {
+        slideDown: 'slideDown .4s ease-in-out',
+      },
+    },
+  },
+
+  plugins: [],
+};
