@@ -1,3 +1,6 @@
+// Các class dùng nhiều viết trong đây
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,js}"],
@@ -21,6 +24,10 @@ export default {
       animation: {
         slideDown: 'slideDown .4s ease-in-out',
       },
+
+      //Anh dung nhieu lan
+
+     
     },
   },
 
