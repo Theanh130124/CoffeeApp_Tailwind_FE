@@ -3,22 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Đưa hình icon mình vào file .ico  -->
+  <link rel="icon" href="https://cdn.prod.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7a9b50ecdfc8_favicon%202.jpg" type="image/gif" sizes="16x16">
+
   <link href="./output.css" type="text/css" rel="stylesheet">
+  <script src="main.js" async></script> 
+  <!-- Có async khỏi để dưới -->
 
 </head>
 <body>
 
   <!-- Mỗi lần build tailwin phải run lại build:css để nó ghi vào output -->
   <div id="root">
-  <div  class="content-wrapper max-w-screen-xl text-base mx-auto px-8 bg-slate-400">
+  <div  class="content-wrapper font-Karla max-w-screen-xl text-base mx-auto px-8 bg-slate-400">
 <!-- py là padding tọa độ y trên dưới -->
  <!-- Có xử lý Responsive -> kéo nhỏ màn hình thì nhóm nav-item lại vào menu -->
     <header class="py-6 mx-10" >
-    <nav class="flex flex-row justify-between">
-      <div class="logo basis-2/6 text-center text-xl font-semibold cursor-pointer">
+    <nav class="flex flex-row justify-between relative">
+
+      <!-- LOGO -->
+      <div class="logo basis-2/6 text-center text-xl font-semibold cursor-pointer ">
         CoffeeStyles
       </div>
-      <ul class="basis-3/6 flex items-center justify-end gap-8 uppercase text-sm text-gray-500 font-medium">
+
+
+      <!-- Các item sẽ vào menu ở 1/6 lg trở xuống mới hidden-->
+
+      <!-- ITEMS -->
+      <ul id="ct-top-menu" class="basis-3/6 hidden lg:flex lg:items-center lg:justify-end lg:gap-8  uppercase text-sm text-gray-500 font-medium">
         <li>
           <a href="#">Home</a>
         </li>
@@ -27,9 +39,14 @@
       <li class="ct-top-menu-item"><a href="#">Blog</a></li>
       <li class="ct-top-menu-item"><a href="#">About</a></li>
       <li class="ct-top-menu-item"><a href="https://github.com/Theanh130124" target="blank">Contact</a></li>
-      <li class="ct-top-menu-item"><a href="#">Styleguide</a></li>
+      <li class="ct-top-menu-item"><a href="#">TheanhDev</a></li>
     </ul>
-      <ul class="basis-1/6 flex justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium">
+
+
+    <!-- lg trở lên thì 1/6 dưới thì 3/6 của nó -> còn khi cái item mất đi nó chiếm 3/6 của 1 -->
+
+    <!-- CART -->
+      <ul class="basis-3/6 lg:basis-1/6 flex justify-end lg:justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium">
         <li class="ct-top-menu-item">
           <a href="#" class="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ct-icon">
@@ -38,6 +55,18 @@
           <span class="mx-2">Cart</span>
           <span class="ct-badge-circle bg-orange-400 text-white">10</span>
         </a></li>
+
+        <!-- Ẩn menu ở màn to -> khi lg mới hiện -> khi item mất đi chiếm 1/6 của 1 -->
+
+
+        <!-- MENU -->
+
+        <div class="basis-1/6 lg:hidden flex items-center px2 sm:px-4 cursor-pointer">
+          <svg id="ct--toogle-top-menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ct-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+          </svg>
+                 
+        </div>
       </ul>
     </nav>  
     </header>
@@ -62,5 +91,6 @@
 
 </div>
 </body>
+
 </html>
 
