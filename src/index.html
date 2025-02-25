@@ -15,7 +15,7 @@
 
   <!-- Mỗi lần build tailwin phải run lại build:css để nó ghi vào output -->
   <div id="root">
-  <div  class="content-wrapper font-Karla max-w-screen-xl text-base mx-auto px-8 bg-slate-400">
+  <div  class="content-wrapper font-Karla max-w-screen-xl text-base mx-auto px-8 ">
 <!-- py là padding tọa độ y trên dưới -->
  <!-- Có xử lý Responsive -> kéo nhỏ màn hình thì nhóm nav-item lại vào menu -->
     <header class="py-6 mx-10" >
@@ -70,8 +70,21 @@
       </ul>
     </nav>  
     </header>
-    <main>Main
-      <div class="slider">slider</div>
+    <main>
+      <!-- Nữa xem bỏ ảnh lại trong img -->
+      <div class="slider h-[530px] bg-[url('https://assets.website-files.com/5be96251aaba7a7b19ecdf69/5be96251aaba7a58aaecdfba_Header-Pic.jpg')] bg-cover bg-no-repeat bg-bottom" >
+        <div class="w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-30">
+          <div class="text-white text-center">
+          <div class="uppercase mb-6">Best place to buy design</div>
+          <div class="font-medium text-5xl mb-6">Coffee Mugs</div>
+          <div class="font-medium text-lg mb-6">The most versatile furniture system ever created. Designed to fit your life, made to move and grow.</div>
+          <div class="flex justify-center ">
+            <!-- w-max cho nền bằng chữ -->
+            <div class="uppercase bg-white text-gray-900 w-max tracking-wider py-4 px-6 text-sm cursor-pointer font-medium hover:bg-opacity-95">Explore our products</div>
+          </div>
+        </div>
+        </div>
+      </div>
 
       <div class="story">
         Story
