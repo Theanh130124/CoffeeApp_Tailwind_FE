@@ -7,7 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'light-coffee': "#C89F94", // Màu tự định nghĩa
+        'coffee':{
+        50:"E8D6D0",
+        200: "#C89F94", // Màu tự định nghĩa //light-coffee  
+        400:"#a25f4b",
+        600:"#744848"
+        }
       },
 
       fontFamily: {
